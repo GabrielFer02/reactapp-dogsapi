@@ -7,12 +7,12 @@ import Footer from "./Components/Footer";
 import Login from "./Components/Login/Login";
 
 const App = () => {
-  return (
+  return ( 
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />}/>
+        <Route path="login/*" element={<Login />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
