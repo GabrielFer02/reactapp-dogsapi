@@ -5,16 +5,19 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Login from "./Components/Login/Login";
+import { GlobalStorage } from "./UserContext";
 
 const App = () => {
-  return ( 
+  return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="login/*" element={<Login />}/>
-      </Routes>
-      <Footer />
+      <GlobalStorage>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="login/*" element={<Login />} />
+        </Routes>
+        <Footer />
+      </GlobalStorage>
     </BrowserRouter>
   );
 };

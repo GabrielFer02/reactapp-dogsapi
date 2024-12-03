@@ -3,7 +3,7 @@ import React from "react";
 const types = {
   email: {
     regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    message: "Preencha um email válido",
+    message: "Preencha um email válido!",
   },
 };
 
@@ -13,7 +13,6 @@ const useForm = (type) => {
 
   function validate(value) {
     if (type === false) return true;
-    console.log(type);
     if (value.length === 0) {
       setError("Preencha um valor");
       return false;
