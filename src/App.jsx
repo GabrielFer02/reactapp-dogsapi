@@ -7,6 +7,10 @@ import Footer from "./Components/Footer";
 import Login from "./Components/Login/Login";
 import { GlobalStorage } from "./UserContext";
 import User from "./Components/User/User";
+import Photo from "./Components/Photo/Photo";
+import UserProfile from "./Components/User/UserProfile";
+import NotFound from "./Components/NotFound";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +20,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="login/*" element={<Login />} />
           <Route path="conta/*" element={<User />} />
+          <Route path="foto/:id" element={<Photo />} />
+          <Route path="perfil/:user" element={<UserProfile />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </GlobalStorage>
