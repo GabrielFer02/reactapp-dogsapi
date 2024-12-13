@@ -13,20 +13,24 @@ import NotFound from "./Components/NotFound";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <GlobalStorage>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="login/*" element={<Login />} />
-          <Route path="conta/*" element={<User />} />
-          <Route path="foto/:id" element={<Photo />} />
-          <Route path="perfil/:user" element={<UserProfile />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </GlobalStorage>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <GlobalStorage>
+          <Header />
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="login/*" element={<Login />} />
+              <Route path="conta/*" element={<User />} />
+              <Route path="foto/:id" element={<Photo />} />
+              <Route path="perfil/:user" element={<UserProfile />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </GlobalStorage>
+      </BrowserRouter>
+    </div>
   );
 };
 
